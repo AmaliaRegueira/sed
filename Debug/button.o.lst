@@ -1,0 +1,117 @@
+   1              		.cpu arm7tdmi
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 18, 4
+  11              		.file	"button.c"
+  21              	.Ltext0:
+  22              		.file 1 "../button.c"
+ 1952              		.align	2
+ 1955              	symbol:
+ 1956 0000 00000000 		.space	4
+ 1957              		.text
+ 1958              		.align	2
+ 1959              		.global	Eint4567_init
+ 1961              	Eint4567_init:
+ 1962              	.LFB0:
+   1:../button.c   **** /*--- ficheros de cabecera ---*/
+   2:../button.c   **** #include "44blib.h"
+   3:../button.c   **** #include "44b.h"
+   4:../button.c   **** #include "def.h"
+   5:../button.c   **** /*--- variables globales ---*/
+   6:../button.c   **** int symbol = 0;
+   7:../button.c   **** /*--- funciones externas ---*/
+   8:../button.c   **** //extern void D8Led_Symbol(int value);
+   9:../button.c   **** /*--- declaracion de funciones ---*/
+  10:../button.c   **** void Eint4567_ISR(void) __attribute__ ((interrupt ("IRQ")));
+  11:../button.c   **** void Eint4567_init(void);
+  12:../button.c   **** extern void leds_switch ();
+  13:../button.c   **** extern void D8Led_symbol(int value);
+  14:../button.c   **** 
+  15:../button.c   **** /*--- codigo de funciones ---*/
+  16:../button.c   **** void Eint4567_init(void)
+  17:../button.c   **** {
+ 1963              		.loc 1 17 0
+ 1964              		.cfi_startproc
+ 1965              		@ Function supports interworking.
+ 1966              		@ args = 0, pretend = 0, frame = 0
+ 1967              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1968              		@ link register save eliminated.
+ 1969 0000 04B02DE5 		str	fp, [sp, #-4]!
+ 1970              	.LCFI0:
+ 1971              		.cfi_def_cfa_offset 4
+ 1972 0004 00B08DE2 		add	fp, sp, #0
+ 1973              		.cfi_offset 11, -4
+ 1974              	.LCFI1:
+ 1975              		.cfi_def_cfa_register 11
+  18:../button.c   **** /* Configuracion del controlador de interrupciones */
+  19:../button.c   **** 	// Borra EXTINTPND escribiendo 1s en el propio registro
+  20:../button.c   **** 	// Borra INTPND escribiendo 1s en I_ISPC
+  21:../button.c   **** 	// Configura las lineas como de tipo IRQ mediante INTMOD
+  22:../button.c   **** 	// Habilita int. vectorizadas y la linea IRQ (FIQ no) mediante INTCON
+  23:../button.c   **** 	// Enmascara todas las lineas excepto Eint4567 y el bit global (INTMSK)
+  24:../button.c   **** 	// Establecer la rutina de servicio para Eint4567
+  25:../button.c   **** /* Configuracion del puerto G */
+  26:../button.c   **** 	// Establece la funcion de los pines (EINT7-EINT0)
+  27:../button.c   **** 	//Habilita las resistencias de pull-up
+  28:../button.c   **** 	// Configura las lineas de int. como de flanco de bajada mediante EXTINT
+  29:../button.c   **** /* Por precaucion, se vuelven a borrar los bits de INTPND y EXTINTPND */
+  30:../button.c   **** }
+ 1976              		.loc 1 30 0
+ 1977 0008 00D08BE2 		add	sp, fp, #0
+ 1978 000c 04B09DE4 		ldmfd	sp!, {fp}
+ 1979 0010 1EFF2FE1 		bx	lr
+ 1980              		.cfi_endproc
+ 1981              	.LFE0:
+ 1983              		.align	2
+ 1984              		.global	Eint4567_ISR
+ 1986              	Eint4567_ISR:
+ 1987              	.LFB1:
+  31:../button.c   **** 
+  32:../button.c   **** /*COMENTAR PARA LA PARTE DEL 8-SEGMENTOS
+  33:../button.c   **** DESCOMENTAR PARA LA PRIMERA PARTE CON INTERRUPCIONES
+  34:../button.c   **** */
+  35:../button.c   **** void Eint4567_ISR(void)
+  36:../button.c   **** {
+ 1988              		.loc 1 36 0
+ 1989              		.cfi_startproc
+ 1990              		@ Interrupt Service Routine.
+ 1991              		@ args = 0, pretend = 0, frame = 0
+ 1992              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1993              		@ link register save eliminated.
+ 1994 0014 04B02DE5 		str	fp, [sp, #-4]!
+ 1995              	.LCFI2:
+ 1996              		.cfi_def_cfa_offset 4
+ 1997 0018 00B08DE2 		add	fp, sp, #0
+ 1998              		.cfi_offset 11, -4
+ 1999              	.LCFI3:
+ 2000              		.cfi_def_cfa_register 11
+  37:../button.c   **** 	//Conmutamos LEDs
+  38:../button.c   **** 	//Delay para eliminar rebotes
+  39:../button.c   **** 	
+  40:../button.c   **** 	/*Atendemos interrupciones*/
+  41:../button.c   **** 	//Borramos EXTINTPND ambas líneas EINT7 y EINT6
+  42:../button.c   **** 	//Borramos INTPND usando ISPC
+  43:../button.c   **** }
+ 2001              		.loc 1 43 0
+ 2002 001c 00D08BE2 		add	sp, fp, #0
+ 2003 0020 04B09DE4 		ldmfd	sp!, {fp}
+ 2004 0024 04F05EE2 		subs	pc, lr, #4
+ 2005              		.cfi_endproc
+ 2006              	.LFE1:
+ 2008              	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 button.c
+C:\Users\amali\AppData\Local\Temp\cc0qh3tG.s:1955   .bss:00000000 symbol
+C:\Users\amali\AppData\Local\Temp\cc0qh3tG.s:1952   .bss:00000000 $d
+C:\Users\amali\AppData\Local\Temp\cc0qh3tG.s:1958   .text:00000000 $a
+C:\Users\amali\AppData\Local\Temp\cc0qh3tG.s:1961   .text:00000000 Eint4567_init
+C:\Users\amali\AppData\Local\Temp\cc0qh3tG.s:1986   .text:00000014 Eint4567_ISR
+                     .debug_frame:00000010 $d
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,136 @@
+   1              		.cpu arm7tdmi
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 18, 4
+  11              		.file	"8led.c"
+  21              	.Ltext0:
+  22              		.file 1 "../8led.c"
+ 1899              		.align	2
+ 1902              	Symbol:
+ 1903 0000 12000000 		.word	18
+ 1904 0004 9F000000 		.word	159
+ 1905 0008 31000000 		.word	49
+ 1906 000c 15000000 		.word	21
+ 1907 0010 9C000000 		.word	156
+ 1908 0014 54000000 		.word	84
+ 1909              		.text
+ 1910              		.align	2
+ 1911              		.global	D8Led_init
+ 1913              	D8Led_init:
+ 1914              	.LFB0:
+   1:../8led.c     **** /*--- ficheros de cabecera ---*/
+   2:../8led.c     **** #include "44b.h"
+   3:../8led.c     **** #include "44blib.h"
+   4:../8led.c     **** /*--- definicion de macros ---*/
+   5:../8led.c     **** /* Mapa de bits de cada segmento
+   6:../8led.c     **** (valor que se debe escribir para que se ilumine el segmento) */
+   7:../8led.c     **** #define SEGMENT_A 0x7F
+   8:../8led.c     **** #define SEGMENT_B 0xBF
+   9:../8led.c     **** #define SEGMENT_C 0xDF 
+  10:../8led.c     **** #define SEGMENT_D 0xF7 
+  11:../8led.c     **** #define SEGMENT_E 0xFB 
+  12:../8led.c     **** #define SEGMENT_F 0xFD 
+  13:../8led.c     **** #define SEGMENT_G 0xFE 
+  14:../8led.c     **** #define SEGMENT_P 0xEF 
+  15:../8led.c     **** 
+  16:../8led.c     **** /*--- variables globales ---*/
+  17:../8led.c     **** /* tabla de segmentos */
+  18:../8led.c     **** int Symbol[] = { SEGMENT_A & SEGMENT_B & SEGMENT_C & SEGMENT_D & SEGMENT_E & SEGMENT_G,
+  19:../8led.c     **** 	SEGMENT_B & SEGMENT_C,
+  20:../8led.c     **** 	SEGMENT_A & SEGMENT_B & SEGMENT_F & SEGMENT_E & SEGMENT_D,
+  21:../8led.c     **** 	SEGMENT_A & SEGMENT_B & SEGMENT_F & SEGMENT_C & SEGMENT_D,
+  22:../8led.c     **** 	SEGMENT_G & SEGMENT_F & SEGMENT_B & SEGMENT_C,
+  23:../8led.c     **** 	SEGMENT_A & SEGMENT_G & SEGMENT_F & SEGMENT_C & SEGMENT_D};//COMPLETAR
+  24:../8led.c     **** 
+  25:../8led.c     **** /*--- declaracion de funciones ---*/
+  26:../8led.c     **** void D8Led_init(void);
+  27:../8led.c     **** void D8Led_symbol(int value);
+  28:../8led.c     **** /*--- codigo de las funciones ---*/
+  29:../8led.c     **** void D8Led_init(void)
+  30:../8led.c     **** {
+ 1915              		.loc 1 30 0
+ 1916              		.cfi_startproc
+ 1917              		@ Function supports interworking.
+ 1918              		@ args = 0, pretend = 0, frame = 0
+ 1919              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1920              		@ link register save eliminated.
+ 1921 0000 04B02DE5 		str	fp, [sp, #-4]!
+ 1922              	.LCFI0:
+ 1923              		.cfi_def_cfa_offset 4
+ 1924 0004 00B08DE2 		add	fp, sp, #0
+ 1925              		.cfi_offset 11, -4
+ 1926              	.LCFI1:
+ 1927              		.cfi_def_cfa_register 11
+  31:../8led.c     **** /* Estado inicial del display con todos los segmentos iluminados
+  32:../8led.c     **** (buscar en los ficheros de cabecera la direccion implicada--->44blib.h) */
+  33:../8led.c     **** 	LED8ADDR = 0; 
+ 1928              		.loc 1 33 0
+ 1929 0008 8537A0E3 		mov	r3, #34865152
+ 1930 000c 0020A0E3 		mov	r2, #0
+ 1931 0010 0020C3E5 		strb	r2, [r3, #0]
+  34:../8led.c     **** }
+ 1932              		.loc 1 34 0
+ 1933 0014 00D08BE2 		add	sp, fp, #0
+ 1934 0018 04B09DE4 		ldmfd	sp!, {fp}
+ 1935 001c 1EFF2FE1 		bx	lr
+ 1936              		.cfi_endproc
+ 1937              	.LFE0:
+ 1939              		.align	2
+ 1940              		.global	D8Led_symbol
+ 1942              	D8Led_symbol:
+ 1943              	.LFB1:
+  35:../8led.c     **** void D8Led_symbol(int value)
+  36:../8led.c     **** {
+ 1944              		.loc 1 36 0
+ 1945              		.cfi_startproc
+ 1946              		@ Function supports interworking.
+ 1947              		@ args = 0, pretend = 0, frame = 8
+ 1948              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1949              		@ link register save eliminated.
+ 1950 0020 04B02DE5 		str	fp, [sp, #-4]!
+ 1951              	.LCFI2:
+ 1952              		.cfi_def_cfa_offset 4
+ 1953 0024 00B08DE2 		add	fp, sp, #0
+ 1954              		.cfi_offset 11, -4
+ 1955              	.LCFI3:
+ 1956              		.cfi_def_cfa_register 11
+ 1957 0028 0CD04DE2 		sub	sp, sp, #12
+ 1958 002c 08000BE5 		str	r0, [fp, #-8]
+  37:../8led.c     **** // muestra Symbol[value] en el display
+  38:../8led.c     **** 	LED8ADDR=Symbol[value];
+ 1959              		.loc 1 38 0
+ 1960 0030 8537A0E3 		mov	r3, #34865152
+ 1961 0034 18209FE5 		ldr	r2, .L3
+ 1962 0038 08101BE5 		ldr	r1, [fp, #-8]
+ 1963 003c 012192E7 		ldr	r2, [r2, r1, asl #2]
+ 1964 0040 FF2002E2 		and	r2, r2, #255
+ 1965 0044 0020C3E5 		strb	r2, [r3, #0]
+  39:../8led.c     **** }
+ 1966              		.loc 1 39 0
+ 1967 0048 00D08BE2 		add	sp, fp, #0
+ 1968 004c 04B09DE4 		ldmfd	sp!, {fp}
+ 1969 0050 1EFF2FE1 		bx	lr
+ 1970              	.L4:
+ 1971              		.align	2
+ 1972              	.L3:
+ 1973 0054 00000000 		.word	Symbol
+ 1974              		.cfi_endproc
+ 1975              	.LFE1:
+ 1977              	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 8led.c
+C:\Users\amali\AppData\Local\Temp\ccA3mUia.s:1902   .data:00000000 Symbol
+C:\Users\amali\AppData\Local\Temp\ccA3mUia.s:1899   .data:00000000 $d
+C:\Users\amali\AppData\Local\Temp\ccA3mUia.s:1910   .text:00000000 $a
+C:\Users\amali\AppData\Local\Temp\ccA3mUia.s:1913   .text:00000000 D8Led_init
+C:\Users\amali\AppData\Local\Temp\ccA3mUia.s:1942   .text:00000020 D8Led_symbol
+C:\Users\amali\AppData\Local\Temp\ccA3mUia.s:1973   .text:00000054 $d
+                     .debug_frame:00000010 $d
+
+NO UNDEFINED SYMBOLS
