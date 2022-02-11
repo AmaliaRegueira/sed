@@ -31,7 +31,12 @@ void Main(void)
 
 	buttons_init();
 	while (1){
-		leds_switch();
-		DelayMs(1000);
+		if ( (rPDATG & 0x00000040) == 0 || (rPDATG & 0x00000080) == 0) { // comprobamos los botones
+			while ( (rPDATG & 0x00000040) == 0 || (rPDATG & 0x00000080) == 0) { // esperamos a que se dejen de pulsar
+				DelayMs(100);
+			}
+			leds_switch();//se cambia el led
+			DelayMs(100);
+		}
 	}
 }
