@@ -396,26 +396,26 @@
 DEFINED SYMBOLS
                             *ABS*:00000000 led.c
                             *COM*:00000004 led_state
-C:\Users\amali\AppData\Local\Temp\ccNdYkFN.s:1875   .text:00000000 $a
-C:\Users\amali\AppData\Local\Temp\ccNdYkFN.s:1878   .text:00000000 leds_on
-C:\Users\amali\AppData\Local\Temp\ccNdYkFN.s:2134   .text:00000164 Led_Display
-C:\Users\amali\AppData\Local\Temp\ccNdYkFN.s:1906   .text:0000001c leds_off
-C:\Users\amali\AppData\Local\Temp\ccNdYkFN.s:1934   .text:00000038 led1_on
-C:\Users\amali\AppData\Local\Temp\ccNdYkFN.s:1967   .text:00000070 $d
-C:\Users\amali\AppData\Local\Temp\ccNdYkFN.s:1971   .text:00000074 $a
-C:\Users\amali\AppData\Local\Temp\ccNdYkFN.s:1974   .text:00000074 led1_off
-C:\Users\amali\AppData\Local\Temp\ccNdYkFN.s:2007   .text:000000ac $d
-C:\Users\amali\AppData\Local\Temp\ccNdYkFN.s:2011   .text:000000b0 $a
-C:\Users\amali\AppData\Local\Temp\ccNdYkFN.s:2014   .text:000000b0 led2_on
-C:\Users\amali\AppData\Local\Temp\ccNdYkFN.s:2047   .text:000000e8 $d
-C:\Users\amali\AppData\Local\Temp\ccNdYkFN.s:2051   .text:000000ec $a
-C:\Users\amali\AppData\Local\Temp\ccNdYkFN.s:2054   .text:000000ec led2_off
-C:\Users\amali\AppData\Local\Temp\ccNdYkFN.s:2087   .text:00000124 $d
-C:\Users\amali\AppData\Local\Temp\ccNdYkFN.s:2091   .text:00000128 $a
-C:\Users\amali\AppData\Local\Temp\ccNdYkFN.s:2094   .text:00000128 leds_switch
-C:\Users\amali\AppData\Local\Temp\ccNdYkFN.s:2127   .text:00000160 $d
-C:\Users\amali\AppData\Local\Temp\ccNdYkFN.s:2131   .text:00000164 $a
-C:\Users\amali\AppData\Local\Temp\ccNdYkFN.s:2203   .text:00000208 $d
+C:\Users\amali\AppData\Local\Temp\ccS2lyzr.s:1875   .text:00000000 $a
+C:\Users\amali\AppData\Local\Temp\ccS2lyzr.s:1878   .text:00000000 leds_on
+C:\Users\amali\AppData\Local\Temp\ccS2lyzr.s:2134   .text:00000164 Led_Display
+C:\Users\amali\AppData\Local\Temp\ccS2lyzr.s:1906   .text:0000001c leds_off
+C:\Users\amali\AppData\Local\Temp\ccS2lyzr.s:1934   .text:00000038 led1_on
+C:\Users\amali\AppData\Local\Temp\ccS2lyzr.s:1967   .text:00000070 $d
+C:\Users\amali\AppData\Local\Temp\ccS2lyzr.s:1971   .text:00000074 $a
+C:\Users\amali\AppData\Local\Temp\ccS2lyzr.s:1974   .text:00000074 led1_off
+C:\Users\amali\AppData\Local\Temp\ccS2lyzr.s:2007   .text:000000ac $d
+C:\Users\amali\AppData\Local\Temp\ccS2lyzr.s:2011   .text:000000b0 $a
+C:\Users\amali\AppData\Local\Temp\ccS2lyzr.s:2014   .text:000000b0 led2_on
+C:\Users\amali\AppData\Local\Temp\ccS2lyzr.s:2047   .text:000000e8 $d
+C:\Users\amali\AppData\Local\Temp\ccS2lyzr.s:2051   .text:000000ec $a
+C:\Users\amali\AppData\Local\Temp\ccS2lyzr.s:2054   .text:000000ec led2_off
+C:\Users\amali\AppData\Local\Temp\ccS2lyzr.s:2087   .text:00000124 $d
+C:\Users\amali\AppData\Local\Temp\ccS2lyzr.s:2091   .text:00000128 $a
+C:\Users\amali\AppData\Local\Temp\ccS2lyzr.s:2094   .text:00000128 leds_switch
+C:\Users\amali\AppData\Local\Temp\ccS2lyzr.s:2127   .text:00000160 $d
+C:\Users\amali\AppData\Local\Temp\ccS2lyzr.s:2131   .text:00000164 $a
+C:\Users\amali\AppData\Local\Temp\ccS2lyzr.s:2203   .text:00000208 $d
                      .debug_frame:00000010 $d
 
 NO UNDEFINED SYMBOLS

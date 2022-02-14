@@ -125,12 +125,12 @@
  1977              	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 8led.c
-C:\Users\amali\AppData\Local\Temp\ccA3mUia.s:1902   .data:00000000 Symbol
-C:\Users\amali\AppData\Local\Temp\ccA3mUia.s:1899   .data:00000000 $d
-C:\Users\amali\AppData\Local\Temp\ccA3mUia.s:1910   .text:00000000 $a
-C:\Users\amali\AppData\Local\Temp\ccA3mUia.s:1913   .text:00000000 D8Led_init
-C:\Users\amali\AppData\Local\Temp\ccA3mUia.s:1942   .text:00000020 D8Led_symbol
-C:\Users\amali\AppData\Local\Temp\ccA3mUia.s:1973   .text:00000054 $d
+C:\Users\amali\AppData\Local\Temp\ccKDZ9r8.s:1902   .data:00000000 Symbol
+C:\Users\amali\AppData\Local\Temp\ccKDZ9r8.s:1899   .data:00000000 $d
+C:\Users\amali\AppData\Local\Temp\ccKDZ9r8.s:1910   .text:00000000 $a
+C:\Users\amali\AppData\Local\Temp\ccKDZ9r8.s:1913   .text:00000000 D8Led_init
+C:\Users\amali\AppData\Local\Temp\ccKDZ9r8.s:1942   .text:00000020 D8Led_symbol
+C:\Users\amali\AppData\Local\Temp\ccKDZ9r8.s:1973   .text:00000054 $d
                      .debug_frame:00000010 $d
 
 NO UNDEFINED SYMBOLS

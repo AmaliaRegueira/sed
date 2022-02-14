@@ -1,31 +1,32 @@
-/*--- ficheros de cabecera ---*/
+/* ficheros de cabecera */
 #include "44blib.h"
 #include "44b.h"
 #include "stdio.h"
-/*--- funciones externas ---*/
+
+/* funciones externas */
 extern void leds_off();
 extern void led1_on();
-extern void leds_switch();
+//extern void leds_switch();
+extern void sys_init();
 extern void Eint4567_init(void);
-//extern void sys_init();
-/*--- declaracion de funciones ---*/
-//void Main(void);
+
+int contador;
+
 void buttons_init(){
-	int desp1 = 6*2; // Son seis pares de bits para el PIN6
-	int desp2 = 7*2; // Son siete pares de bits para el PIN7
+	rPCONG = rPCONG & ~(0x01<<12);
+	rPCONG = rPCONG & ~(0x01<<13);
+	rPCONG = rPCONG & ~(0x01<<14);
+	rPCONG = rPCONG & ~(0x01<<15);
 
-	rPCONG =~(0xf<<desp1); // Inicializamos los pines 6 y 7
-
-	rPUPG &= ~(0x1 <<6); //activamos las seniales de eint6
-	rPUPG &= ~(0x1 <<7); //activamos las seniales de eint7
+	rPUPG = 0;
 }
 
-/*--- codigo de funciones ---*/
+/*Apartado 1
 void Main(void)
 {
-	/* Inicializar controladores */
+	//Inicializar controladores
 	sys_init(); // Inicializacion de la placa, interrupciones y puertos
-	/* Establecer valor inicial de los LEDs */
+	//Establecer valor inicial de los LEDs
 	leds_off();
 	led1_on();
 
@@ -39,4 +40,27 @@ void Main(void)
 			DelayMs(100);
 		}
 	}
+}*/
+
+void Main(void)
+{
+	sys_init(); // Inicializacion de la placa, interrupciones y puertos
+	buttons_init(); // Inicializar botones
+	Eint4567_init();
+	leds_off();
+	led1_on();
+	while (1){}
 }
+/*
+void Main(void)
+{
+	 Inicializar controladores
+	contador = 0;
+	sys_init(); // Inicializacion de la placa, interrupciones y puertos
+	D8Led_init();
+	buttons_init(); // Inicializar botones
+	Eint4567_init();
+	 Establecer valor inicial de los LEDs
+	leds_off();
+	while (1){}
+}*/

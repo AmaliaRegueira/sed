@@ -672,28 +672,28 @@ DEFINED SYMBOLS
                             *ABS*:00000000 44blib.c
                             *COM*:00000004 downPt
                             *COM*:00000004 fileSize
-C:\Users\amali\AppData\Local\Temp\cc9PSFmL.s:3131   .data:00000000 mallocPt
-C:\Users\amali\AppData\Local\Temp\cc9PSFmL.s:3128   .data:00000000 $d
-C:\Users\amali\AppData\Local\Temp\cc9PSFmL.s:3138   .bss:00000000 restart
-C:\Users\amali\AppData\Local\Temp\cc9PSFmL.s:3135   .bss:00000000 $d
-C:\Users\amali\AppData\Local\Temp\cc9PSFmL.s:3145   .data:00000004 run
-C:\Users\amali\AppData\Local\Temp\cc9PSFmL.s:3150   .data:00000008 delayLoopCount
-C:\Users\amali\AppData\Local\Temp\cc9PSFmL.s:3154   .text:00000000 $a
-C:\Users\amali\AppData\Local\Temp\cc9PSFmL.s:3157   .text:00000000 Delay
-C:\Users\amali\AppData\Local\Temp\cc9PSFmL.s:3267   .text:00000114 $d
-C:\Users\amali\AppData\Local\Temp\cc9PSFmL.s:3278   .text:00000134 $a
-C:\Users\amali\AppData\Local\Temp\cc9PSFmL.s:3281   .text:00000134 DelayMs
-C:\Users\amali\AppData\Local\Temp\cc9PSFmL.s:3330   .text:00000194 Port_Init
-C:\Users\amali\AppData\Local\Temp\cc9PSFmL.s:3436   .text:000002a4 $d
-C:\Users\amali\AppData\Local\Temp\cc9PSFmL.s:3470   .text:00000320 $a
-C:\Users\amali\AppData\Local\Temp\cc9PSFmL.s:3473   .text:00000320 malloc
-C:\Users\amali\AppData\Local\Temp\cc9PSFmL.s:3535   .text:000003b4 $d
-C:\Users\amali\AppData\Local\Temp\cc9PSFmL.s:3540   .text:000003bc $a
-C:\Users\amali\AppData\Local\Temp\cc9PSFmL.s:3543   .text:000003bc free
-C:\Users\amali\AppData\Local\Temp\cc9PSFmL.s:3571   .text:000003e4 $d
-C:\Users\amali\AppData\Local\Temp\cc9PSFmL.s:3575   .text:000003e8 $a
-C:\Users\amali\AppData\Local\Temp\cc9PSFmL.s:3578   .text:000003e8 sys_init
-C:\Users\amali\AppData\Local\Temp\cc9PSFmL.s:3621   .text:00000438 $d
+C:\Users\amali\AppData\Local\Temp\ccQg9WsL.s:3131   .data:00000000 mallocPt
+C:\Users\amali\AppData\Local\Temp\ccQg9WsL.s:3128   .data:00000000 $d
+C:\Users\amali\AppData\Local\Temp\ccQg9WsL.s:3138   .bss:00000000 restart
+C:\Users\amali\AppData\Local\Temp\ccQg9WsL.s:3135   .bss:00000000 $d
+C:\Users\amali\AppData\Local\Temp\ccQg9WsL.s:3145   .data:00000004 run
+C:\Users\amali\AppData\Local\Temp\ccQg9WsL.s:3150   .data:00000008 delayLoopCount
+C:\Users\amali\AppData\Local\Temp\ccQg9WsL.s:3154   .text:00000000 $a
+C:\Users\amali\AppData\Local\Temp\ccQg9WsL.s:3157   .text:00000000 Delay
+C:\Users\amali\AppData\Local\Temp\ccQg9WsL.s:3267   .text:00000114 $d
+C:\Users\amali\AppData\Local\Temp\ccQg9WsL.s:3278   .text:00000134 $a
+C:\Users\amali\AppData\Local\Temp\ccQg9WsL.s:3281   .text:00000134 DelayMs
+C:\Users\amali\AppData\Local\Temp\ccQg9WsL.s:3330   .text:00000194 Port_Init
+C:\Users\amali\AppData\Local\Temp\ccQg9WsL.s:3436   .text:000002a4 $d
+C:\Users\amali\AppData\Local\Temp\ccQg9WsL.s:3470   .text:00000320 $a
+C:\Users\amali\AppData\Local\Temp\ccQg9WsL.s:3473   .text:00000320 malloc
+C:\Users\amali\AppData\Local\Temp\ccQg9WsL.s:3535   .text:000003b4 $d
+C:\Users\amali\AppData\Local\Temp\ccQg9WsL.s:3540   .text:000003bc $a
+C:\Users\amali\AppData\Local\Temp\ccQg9WsL.s:3543   .text:000003bc free
+C:\Users\amali\AppData\Local\Temp\ccQg9WsL.s:3571   .text:000003e4 $d
+C:\Users\amali\AppData\Local\Temp\ccQg9WsL.s:3575   .text:000003e8 $a
+C:\Users\amali\AppData\Local\Temp\ccQg9WsL.s:3578   .text:000003e8 sys_init
+C:\Users\amali\AppData\Local\Temp\ccQg9WsL.s:3621   .text:00000438 $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS
